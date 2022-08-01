@@ -16,7 +16,7 @@ jobs:
     steps:
       - add_ssh_keys:
               fingerprints:
-              - "2d:12:96:05:00:e0:ed:62:d5:c9:d1:b8:88:10:a4:0c"
+              - "fe:50:68:50:e0:9f:39:dc:de:75:d2:d2:b0:cb:59:6c"
       - checkout
       - run:
           name: Build
@@ -31,7 +31,7 @@ jobs:
           name: Deploy Over SSH
           command: |
               #ssh -o StrictHostKeyChecking=no circleuser@ec2-54-91-238-15.compute-1.amazonaws.com
-              scp -o StrictHostKeyChecking=no /home/circleci/project/webapp/target/webapp.war circleuser@ec2-44-203-5-68.compute-1.amazonaws.com:/tmp
+              scp -o StrictHostKeyChecking=no /home/circleci/project/webapp/target/webapp.war circleuser@ec2-3-91-58-143.compute-1.amazonaws.com:/tmp
               #sudo ssh circleuser@ec2-54-91-238-15.compute-1.amazonaws.com
              #sudo spawn ssh circleuser@ec2-18-234-224-234.compute-1.amazonaws.com
                 #scp -r /home/circleci/project/target/maven-web-application.war circleuser@ec2-54-91-238-15.compute-1.amazonaws.com:/tmp
